@@ -6,7 +6,7 @@
 void main()
 {
         int i;
-        float a, b, aux=0.0, n, sum, h, y;
+        float a, b, aux1=0.0, aux2=0.0, n, sum, h, y;
         printf("\nEnter a (lower limit), b (upper limit) & n:");
         scanf("%f %f %f",&a,&b,&n);
         h=(b-a)/n;
@@ -14,10 +14,17 @@ void main()
         for(i=0; i<n; i++)
         {
                 y=x0+i*h;
-                aux+=f(y);
+                if(i%2==0)
+                {
+                        aux2+=f(y);
+                }
+                else
+                {
+                        aux1+=f(y);
+                }
                 printf("\n %d %.4f",i,y,f(y));
         }
-        sum+=aux*2;
-        sum*=h/2;
+        sum+=aux1*4+aux2*2;
+        sum*=h/3;
         printf("\n Answer: %.3f",sum);
 }
