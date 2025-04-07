@@ -18,7 +18,7 @@ void main()
         scanf("%f %f %f",&a,&b,&n);
         h=(b-a)/n;
         sum=f(a)+f(b); //sum of first and last term
-        for(i=0; i<n; i++) //sum of remaining terms
+        for(i=1; i<n; i++) //sum of remaining terms
         {
                 x=x0+i*h;
                 if(i%2==0) //if even
