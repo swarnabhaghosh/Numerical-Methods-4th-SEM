@@ -7,10 +7,10 @@ void main()
 {
         int i;
         float a, b, aux=0.0, n, sum, h, y;
-        printf("\nEnter a (lower limit), b (upper limit) & n:");
-        scanf("%f %f %f",&a,&b,&n);
-        h=(b-a)/n;
-        sum=f(0)+f(1);
+        printf("\nEnter a (lower limit), b (upper limit) & n:"); //a=lower limit, b=upper limit, n= no. of subintervals
+        scanf("%f %f %f", &a, &b, &n);
+        h=(b-a)/n; 
+        sum=f(a)+f(b); //sum of first and the last term
         for(i=0; i<n; i++)
         {
                 y=x0+i*h;
