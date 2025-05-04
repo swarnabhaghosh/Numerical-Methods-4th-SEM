@@ -10,13 +10,13 @@
  	printf("Enter:");
  	scanf("%f %f",&a,&b);
 
- while((b-a)>=0.001)
+ 	while((b-a)>=0.001)
  	{
- 	c=(a+b)/2;
- 	if(f(a)*f(c)<0)
- 		b=c;
- 	else
- 		a=c;
+		c=(a+b)/2;
+		if(f(a)*f(c)<0)
+			b=c;
+		else
+			a=c;
 	}
  printf("result=%.3f",c);
 }

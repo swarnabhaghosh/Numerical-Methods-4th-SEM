@@ -6,7 +6,7 @@ float f(float x, float y)
 void main()
 {
         float x0, y0, h, xn, k1, k2, k3, k4, k;
-        printf("\nEnter the initial values of x, y, h, xn:");
+        printf("\nEnter the initial values of x0, y0, h, xn:");
         scanf("%f %f %f %f",&x0, &y0, &h, &xn );
         do
         {

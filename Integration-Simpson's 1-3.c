@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<math.h>
 #define f(x) (x*sin(x)+pow(x,3))
-#define x0 0
 
 /*
 h=(b-a)/n
@@ -13,11 +12,12 @@ integration result= h/2[y0+yn+2*(sum of even terms)+4*(sum of remaining odd term
 void main()
 {
         int i;
-        float a, b, aux1=0.0, aux2=0.0, n, sum, h, x; //aux1 = sum of even terms, aux2 = sum of remaining odd terms
-        printf("\nEnter a , b & n:"); //a=lower limit, b=upper limit, n= no. of subintervals
+        float a, b, aux1=0.0, aux2=0.0, n, sum, h, x, x0, xn; //aux1 = sum of even terms, aux2 = sum of remaining odd terms
+        printf("\nEnter a , b  & n:"); //a=lower limit, b=upper limit, n= no. of subintervals
         scanf("%f %f %f",&a,&b,&n);
         h=(b-a)/n;
-        sum=f(a)+f(b); //sum of first and last term
+        x0=a; xn=b;
+        sum=f(x0)+f(xn); //sum of first and last term
         for(i=1; i<n; i++) //sum of remaining terms
         {
                 x=x0+i*h;

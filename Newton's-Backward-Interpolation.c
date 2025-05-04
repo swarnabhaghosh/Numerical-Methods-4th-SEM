@@ -12,11 +12,18 @@ void main()
         scanf("%lf %lf",&x[i],&y[i][0]);
     }
     //constructing backward difference table
+    //column wise table formation, 
+    //as first column is filled with the input values,
+    //loop wll start from the 2nd column
     for(j=1; j<n; j++)
     {
         for(i=j; i<n; i++)
         {
             y[i][j]=y[i][j-1]-y[i-1][j-1];
+            //to create jth column have to look into
+            //the previous column, (j-1)th column
+            //and from the value of the ith row the value of the
+            //previous row, (i-1)th row is subtracted
         }
     }
     //print the backward difference table
@@ -43,6 +50,3 @@ void main()
     printf("\na=%lf",a);
     printf("\nsum=%lf",sum);
 }
-
-
-

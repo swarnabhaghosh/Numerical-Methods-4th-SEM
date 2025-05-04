@@ -12,11 +12,18 @@ void main()
         scanf("%lf %lf",&x[i],&y[i][0]);
     }
     //constructing forward difference table
-    for(j=1; j<n; j++)
+    //column wise table formation, 
+    //as first column is filled with the input values,
+    //loop wll start from the 2nd column
+    for(j=1; j<n; j++) //for column
     {
-        for(i=0; i<n-j; i++)
+        for(i=0; i<n-j; i++) //for rows
         {
             y[i][j]=y[i+1][j-1]-y[i][j-1];
+            //to create jth column have to look into
+            //the previous column, (j-1)th column
+            //and subtract the value of the ith row from its
+            //next row, (i+1)th row 
         }
     }
     //print the forward difference table
@@ -37,12 +44,9 @@ void main()
     double p=1.0;
     for(j=1; j<n; j++)
     {
-        p*=(u-j+1)/j;
+        p=p*(u-j+1)/j;
         sum+=p*y[0][j];
     }
     printf("\na=%lf",a);
     printf("\nsum=%lf",sum);
 }
-
-
-

@@ -19,7 +19,7 @@ void main()
         sfx2+=fx2[i];
     }
     mean=sfx/sf;
-    variance=(sfx2/sf)-pow(mean,2);; //variance=[s(fx^2)/s(f)]-[s(fx)/s(f)]^2
+    variance=(sfx2/sf)-pow(mean,2); //variance=[s(fx^2)/s(f)]-[s(fx)/s(f)]^2
     sd=sqrt(variance);
     /*printf("lower\tupper\tfrequency\n");
     for(i=0;i<n;i++)
