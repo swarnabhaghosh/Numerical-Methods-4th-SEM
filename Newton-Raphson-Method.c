@@ -34,23 +34,20 @@ int main()
 	}while(1);
 
 	//finding x0
-	if(fabs(f(x1))<fabs(f(x2)))
+	if(fabs(f(x1))<fabs(f(x2))) //taking the absolute value to check which is nearer to 0
 	{
 		x0=x1;
 	}
 	else
 	{
-		x1=x2;
+		x0=x2;
 	}
 	//finding root
 	for(i=1;i<=mi;i++)
 	{
 		x=x0-(f(x0)/d(x0));
 		if(fabs(x-x0)<Error)
-		{
-			printf("\nIteration:%d Final root:%f",i,x);
-			return 0;
-		}
+			break;
 		printf("\nIteration:%d Roots:%f",i,x);
 		x0=x;
 	}

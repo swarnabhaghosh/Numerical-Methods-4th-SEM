@@ -7,16 +7,24 @@
  void main()
  {
  	float a,b,c;
+	int i=1, mi;
  	printf("Enter:");
  	scanf("%f %f",&a,&b);
 
- 	while((b-a)>=0.001)
+	printf("\nEnter the maximum iteration:");
+	scanf("%d",&mi);
+
+ 	do
  	{
 		c=(a+b)/2;
 		if(f(a)*f(c)<0)
 			b=c;
 		else
 			a=c;
-	}
- printf("result=%.3f",c);
+		if(fabs(b-a)<0.001 || fabs(c)<0.001)
+			break;
+		printf("\niteration=%d, root=%f", i, c);
+		i++;
+	}while(i<=mi);
+ printf("\nresult=%.3f",c);
 }

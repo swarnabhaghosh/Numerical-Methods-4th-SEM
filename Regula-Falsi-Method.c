@@ -9,7 +9,7 @@ float findValueAt(float x)
 
 float findX(float x1,float x2)
 {
-    // return (x1+x2)/2;  //for Bisection Method
+    //c=[af(b)-bf(a)]/[f(b)-f(a)]
       return (x1*findValueAt(x2) - x2 * findValueAt(x1)) / (findValueAt(x2) - findValueAt(x1));
 }
 int main()
@@ -33,7 +33,6 @@ int main()
         {
             printf("Roots Lie between %f and %f\n",x1,x2);
             break;
-
         }
     } while(1);
 
@@ -49,11 +48,7 @@ int main()
       printf("Iterations=%d  Root=%f\n",i,x);
       x3 = findX(x1,x2);
       if(fabs(x3-x)<error)
-      {
-          printf("Root=%f  Total Iterations=%d",x,i);
-          return 0;
-
-      }
+          break;
       x=x3;  //Important
       i++;
     }while(i<=maxIteration);
