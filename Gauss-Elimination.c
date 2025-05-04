@@ -16,7 +16,7 @@ void uppertriangle()
     //for n=3, for conversion to upper triangular=>
     //when i=0, it is the step 1 of matrix conversion, when i=1, it is the step 2 of matrix conversion, 
     {
-        for(j=i+1; j<n; j++) //for each column of a row as
+        for(j=0; j<n; j++) //for each column of a row as
         {
             if(i<j) //for upper triangular
             {
