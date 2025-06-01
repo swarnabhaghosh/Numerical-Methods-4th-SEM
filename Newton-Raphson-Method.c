@@ -2,7 +2,7 @@
 #include<math.h>
 float f(float x)
 {
-    return (pow(x,3)-3*x-5);
+    return (pow(x,4)-x-10);
 }
 float d(float x)
 {

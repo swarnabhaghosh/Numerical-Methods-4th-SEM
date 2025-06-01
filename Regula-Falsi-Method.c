@@ -4,7 +4,7 @@
 #define error 0.0001 //3 decimal places
 float findValueAt(float x)
 {
-   return x*x*x - 2*x -5;
+   return 3*x - cos(x) -1;
 }
 
 float findX(float x1,float x2)

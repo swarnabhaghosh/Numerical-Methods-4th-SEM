@@ -2,7 +2,7 @@
 #include<math.h>
  float f(float x)
  {
- 	return (pow(x,3)-3*x-5);
+ 	return (pow(x,3)-9*x+1);
  }
  void main()
  {
@@ -26,5 +26,5 @@
 		printf("\niteration=%d, root=%f", i, c);
 		i++;
 	}while(i<=mi);
- printf("\nresult=%.3f",c);
+ printf("\nresult=%f",c);
 }
